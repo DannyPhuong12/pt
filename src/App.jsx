@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
 import CustomerList from './components/CustomerList'
 import TrainingList from './components/TrainingList'
 import CalendarPage from './components/CalendarPage'
+import StatisticsPage from './components/StatisticsPage'
 import './App.css'
 
 const App = () => {
@@ -20,6 +21,9 @@ const App = () => {
             <NavLink to="/calendar" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
               Kalenteri
             </NavLink>
+            <NavLink to="/statistics" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+              Tilastot
+            </NavLink>
           </div>
         </nav>
         <main className="main-content">
@@ -27,6 +31,7 @@ const App = () => {
             <Route path="/" element={<CustomerList />} />
             <Route path="/trainings" element={<TrainingList />} />
             <Route path="/calendar" element={<CalendarPage />} />
+            <Route path="/statistics" element={<StatisticsPage />} />
           </Routes>
         </main>
       </div>
